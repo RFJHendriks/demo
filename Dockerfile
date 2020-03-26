@@ -1,5 +1,5 @@
 FROM adoptopenjdk:11-jre-hotspot
-RUN groupadd -r spring && useradd -r spring -gapp spring
+RUN groupadd -r spring && useradd -r spring -g spring
 USER spring:spring
 ARG DEPENDENCY=target/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
